@@ -1,1 +1,1 @@
-# This Repo is for DIG2500C Fundamentals of Inderative Design.
+# This Repo is for DIG2500C Fundamentals of Interactive Design.
