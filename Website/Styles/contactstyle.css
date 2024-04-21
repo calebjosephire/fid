@@ -1,0 +1,30 @@
+body {
+    font-family: Georgia, serif;
+    font-size: 100%;
+    line-height: 1.75em;
+    background-color: lightgrey;
+     }
+    h1 {
+    font-family: serif;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid red;
+    margin-top: 30px;
+    }
+    td, th {
+        border: 1px solid darkgrey;
+    }
+    table {border: 1px solid black;
+    }
+    p {
+        font-size: large;
+    }
+    footer {
+    text-align: center;
+    padding-top: 1em;
+        background-color: gray; /* Set your desired background color */
+        bottom: 0; /* Stick footer to the bottom */
+        width: 100%; /* Make footer span the entire width */
+        height: 125px; /* Set the desired footer height */
+    }
