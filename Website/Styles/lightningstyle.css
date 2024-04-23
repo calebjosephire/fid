@@ -3,13 +3,13 @@ body {
     font-size: 100%;
     line-height: 1.75em;
     margin: 0 10%;
-    background-image: url(Images/Lightning.png);
+    background-image: url(../Images/Lightning.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-color: lightgrey;
     background-size: 30%;
-      }
+    }
 h1 {
     font-family: serif;
     font-weight: normal;

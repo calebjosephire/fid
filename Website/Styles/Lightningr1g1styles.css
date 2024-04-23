@@ -3,27 +3,31 @@ body {
     font-size: 100%;
     line-height: 1.75em;
     margin: 0 10%;
-    background-image: url(../Images/Bucslogo.png);
+    background-image: url(Images/Lightning.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-color: lightgrey;
     background-size: 30%;
-    }
+      }
 h1 {
     font-family: serif;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid blue;
     margin-top: 30px;
-    }
-td, th {
-        border: 1px solid darkgrey;
-    }
-table {border: 1px solid black;
-    background-color: gray;
+    margin: 0 15%;
     }
     p {
         font-size: large;
     }
+
+td, th {
+    border: 1px solid #CCC;
+    margin: 0 15%;
+}
+table {
+    border: 1px solid black;
+    margin: 0 15%;
+}
