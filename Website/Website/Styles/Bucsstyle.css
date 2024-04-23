@@ -1,0 +1,29 @@
+body {
+    font-family: Georgia, serif;
+    font-size: 100%;
+    line-height: 1.75em;
+    margin: 0 10%;
+    background-image: url(../Images/Bucslogo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: lightgrey;
+    background-size: 30%;
+    }
+h1 {
+    font-family: serif;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid red;
+    margin-top: 30px;
+    }
+td, th {
+        border: 1px solid darkgrey;
+    }
+table {border: 1px solid black;
+    background-color: gray;
+    }
+    p {
+        font-size: large;
+    }
