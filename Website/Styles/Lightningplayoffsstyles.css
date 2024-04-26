@@ -3,12 +3,12 @@ body {
     font-size: 100%;
     line-height: 1.75em;
     margin: 0 10%;
-    background-image: url(Images/Lightning.png);
+    background-image: url(../Images/StanleyCup.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-color: lightgrey;
-    background-size: 30%;
+    background-size: 75%;
       }
 h1 {
     font-family: serif;
@@ -22,7 +22,12 @@ h1 {
     p {
         font-size: large;
     }
-
+    h2 {
+        border-bottom: 1px solid black;
+        border-width: 3px;
+        border-radius: 0%;
+        width: 15%;
+    }
 td, th {
     border: 1px solid #CCC;
     margin: 0 15%;
