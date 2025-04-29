@@ -29,7 +29,7 @@ body {
         width: 20%;
     }
   td, th {
-    border: 1px solid #CCC;
+    border: 1.5px solid #CCC;
     margin: 0 15%;
   }
   table {
