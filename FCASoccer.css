@@ -1,0 +1,25 @@
+
+    body {
+        font-family: Georgia, serif;
+        font-size: 100%;
+        line-height: 1.75em;
+        margin: 0 10%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-color: lightgrey;
+        background-size: 25%;}
+    header {font-size: larger;
+    text-align: center}
+    p {text-align: center;}
+    tr {text-align: center;}
+    .center-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* Optional: controls table width */}
+    #myHeader {
+  background-color:  darkgray;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
