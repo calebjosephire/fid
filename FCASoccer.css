@@ -22,4 +22,10 @@
   color: black;
   padding: 40px;
   text-align: center;
+  border: green 3px solid;
 }
+/* The element with id="demo" */
+#demo {
+  border: green 5px solid;
+}
+
