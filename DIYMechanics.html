@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DIY Mechanics – Fix My Car</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .app-container {
+      width: 100%;
+      max-width: 900px;
+      padding: 24px;
+    }
+
+    .card {
+      background: #111827;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border: 1px solid #1f2937;
+      animation: slideUp 0.8s ease forwards;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #f9fafb;
+    }
+
+    .title-block p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    .badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #1d4ed8;
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: #9ca3af;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #374151;
+      background: #020617;
+      color: #e5e7eb;
+      font-size: 14px;
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.25s ease;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #9ca3af;
+      border: 1px solid #374151;
+    }
+
+    .btn-secondary:hover {
+      background: #1f2937;
+    }
+
+    .btn-primary {
+      background: #22c55e;
+      color: #022c22;
+    }
+
+    .btn-primary:hover {
+      background: #16a34a;
+      transform: translateY(-2px);
+    }
+
+    .results {
+      border-top: 1px solid #1f2937;
+      padding-top: 16px;
+      margin-top: 20px;
+    }
+
+    .results h2 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #e5e7eb;
+    }
+
+    .results p {
+      margin: 0 0 12px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .video-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .video-card {
+      background: #020617;
+      border-radius: 12px;
+      padding: 10px 12px;
+      border: 1px solid #1f2937;
+      animation: fadeIn 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .video-title {
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: #f9fafb;
+    }
+
+    .video-meta {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    .video-link {
+      font-size: 12px;
+      color: #22c55e;
+      text-decoration: none;
+    }
+
+    .video-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="card">
+      <div class="header">
+        <div class="title-block">
+          <h1>DIY Mechanics – Fix My Car</h1>
+          <p>Enter your car details and issue to get targeted repair video ideas.</p>
+        </div>
+        <div class="badge">HTML Prototype</div>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="year">Year</label>
+          <input id="year" type="number" placeholder="e.g. 2015" />
+        </div>
+
+        <div class="field">
+          <label for="make">Make</label>
+          <input id="make" type="text" placeholder="e.g. Toyota" />
+        </div>
+
+        <div class="field">
+          <label for="model">Model</label>
+          <input id="model" type="text" placeholder="e.g. Camry" />
+        </div>
+
+        <div class="field">
+          <label for="issue">Main Issue</label>
+          <select id="issue">
+            <option value="">Select an issue</option>
+            <option value="won't start">Car won't start</option>
+            <option value="check engine light">Check engine light</option>
+            <option value="brakes">Brake noise or issues</option>
+            <option value="oil leak">Oil leak</option>
+            <option value="overheating">Overheating</option>
+            <option value="battery">Battery / electrical</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="details">Describe the problem</label>
+        <textarea id="details" placeholder="Any sounds, smells, or when it happens (cold start, highway, etc.)"></textarea>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-secondary" onclick="clearForm()">Clear</button>
+        <button class="btn btn-primary" onclick="getRecommendations()">Get Recommendations</button>
+      </div>
+
+      <div class="results">
+        <h2>Recommended Videos</h2>
+        <p id="results-intro">Fill out the form and click “Get Recommendations” to see suggested video topics.</p>
+        <div id="video-list" class="video-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function clearForm() {
+      document.getElementById('year').value = '';
+      document.getElementById('make').value = '';
+      document.getElementById('model').value = '';
+      document.getElementById('issue').value = '';
+      document.getElementById('details').value = '';
+      document.getElementById('video-list').innerHTML = '';
+      document.getElementById('results-intro').textContent =
+        'Fill out the form and click “Get Recommendations” to see suggested video topics.';
+    }
+
+    function getRecommendations() {
+      const year = document.getElementById('year').value.trim();
+      const make = document.getElementById('make').value.trim();
+      const model = document.getElementById('model').value.trim();
+      const issue = document.getElementById('issue').value;
+      const details = document.getElementById('details').value.trim();
+
+      const videoList = document.getElementById('video-list');
+      const intro = document.getElementById('results-intro');
+      videoList.innerHTML = '';
+
+      if (!year || !make || !model || !issue) {
+        intro.textContent = 'Please fill in year, make, model, and main issue to generate recommendations.';
+        return;
+      }
+
+      intro.textContent = `Here are some video ideas for a ${year} ${make} ${model} with "${issue}" issues.`;
+
+      const baseQuery = `${year} ${make} ${model} ${issue}`;
+      const extraHint = details ? ` ${details.split(' ').slice(0, 5).join(' ')}` : '';
+
+      const videos = [
+        {
+          title: `How to diagnose ${issue} on a ${year} ${make} ${model}`,
+          channel: 'DIY Garage',
+          length: '12:34',
+          url: `https://www.youtube.com/results?search_query=${encodeURIComponent(baseQuery)}`
+        },
+        {
+          title: `${year} ${make} ${model} – common causes of ${issue}`,
+          channel: 'Backyard Mechanic',
+          length: '9:02',
+          url: `https://www.youtube.com/results?search_query=${encodeURIComponent(baseQuery + ' causes')}`
+        },
+        {
+          title: `${issue} fix step-by-step (${year} ${make} ${model})`,
+          channel: 'Fix It Right',
+          length: '18:47',
+          url: `https://www.youtube.com/results?search_query=${encodeURIComponent(baseQuery + extraHint + ' repair')}`
+        }
+      ];
+
+      videos.forEach((v, i) => {
+        const card = document.createElement('div');
+        card.className = 'video-card';
+        card.style.animationDelay = `${i * 0.15}s`;
+
+        const title = document.createElement('div');
+        title.className = 'video-title';
+        title.textContent = v.title;
+
+        const meta = document.createElement('div');
+        meta.className = 'video-meta';
+        meta.textContent = `${v.channel} • ${v.length}`;
+
+        const link = document.createElement('a');
+        link.className = 'video-link';
+        link.href = v.url;
+        link.target = '_blank';
+        link.textContent = 'Open on YouTube';
+
+        card.appendChild(title);
+        card.appendChild(meta);
+        card.appendChild(link);
+        videoList.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
